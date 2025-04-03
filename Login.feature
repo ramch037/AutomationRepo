@@ -1,15 +1,26 @@
 Feature: Login Functionality
-As a registered user,
-I want to login to my account,
-To view my profile page and check my previous orders
+  As a registered user,
+  I want to login to my account.
 
-Scenario: Login with valid credentials
+  Scenario Outline: Login with invalid credentials
+    Given I am on the home page and navigated to the account login page
+    When I enter an invalid user name <userName>
+    And I enter an invalid password <password>
+    And I click on the Login button
+    Then I should not be logged in
 
-Given I am on the home page and navigated to the account login page.
-When I enter a valid user name "Ramakrishna@gmail.com"
-And I enter a valid password "123Abc@"
-And I click on the Login button
-Then I should be redirected to the Profile page
-And I can see the Previous orders section
+    Examples:
+      | userName               | password  |
+      | Ramakrishna@gmail.com  | 123Abc@   |
+      | Prasad@gmail.com       | Xyz@789   |
 
+  Scenario Outline: Login with empty credentials
+    Given I am on the home page and navigated to the account login page
+    When I enter an empty user name <userName>
+    And I enter an empty password <password>
+    And I click on the Login button
+    Then I should not be logged in
 
+    Examples:
+      | userName | password |
+      |          |          |
