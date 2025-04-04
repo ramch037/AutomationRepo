@@ -1,0 +1,33 @@
+ecommerce-bdd-pom/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   ├── com.ecommerce.pages/
+│   │   │   │   ├── HomePage.java
+│   │   │   │   ├── LoginPage.java
+│   │   │   │   ├── ProductPage.java
+│   │   │   │   ├── CartPage.java
+│   │   │   │   └── CheckoutPage.java
+│   │   │   └── com.ecommerce.utils/
+│   │   │       ├── ConfigReader.java
+│   │   │       ├── DriverFactory.java
+│   │   │       └── TestDataUtil.java
+│   └── test/
+│       ├── java/
+│       │   ├── com.ecommerce.stepdefinitions/
+│       │   │   ├── LoginSteps.java
+│       │   │   ├── ProductSteps.java
+│       │   │   └── CheckoutSteps.java
+│       │   ├── com.ecommerce.runners/
+│       │   │   └── TestRunner.java
+│       │   └── com.ecommerce.hooks/
+│       │       └── Hooks.java
+│       └── resources/
+│           ├── features/
+│           │   ├── login.feature
+│           │   ├── product.feature
+│           │   └── checkout.feature
+│           └── config/
+│               └── config.properties
+├── pom.xml
+└── README.md
